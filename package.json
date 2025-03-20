@@ -5,12 +5,14 @@
   "type": "module",
   "homepage": "https://Duhat.github.io/ISRPO4",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "serve dist -s"
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
+  "build": "react-scripts build",
+  "start": "react-scripts start",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
 },
+
 
 
   "dependencies": {
