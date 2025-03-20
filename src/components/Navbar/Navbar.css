@@ -1,0 +1,146 @@
+
+/* Основные стили для Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 1rem 2rem;
+  background: linear-gradient(145deg, #1f1f1f, #292929);
+  color: #f1f1f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap; /* Разрешаем элементы переноса на новую строку */
+}
+
+img {
+  width: 100px;
+}
+
+.login_bytton {
+  background-color: rgb(163, 0, 0);
+}
+
+.navbar__search {
+  flex-grow: 1;
+  margin: 0 5rem;
+  position: relative;
+}
+
+.navbar__search input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: #2a2a2a;
+  border: 2px solid #555;
+  color: #f1f1f1;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar__search input:focus {
+  border-color: rgb(163, 0, 0);
+}
+
+.navbar__auth button {
+  padding: 0.75rem 1.25rem;
+  background-color: rgb(163, 0, 0);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.navbar__auth button:hover {
+  transform: scale(1.05);
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.search-results li {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #555;
+  transition: background-color 0.3s;
+}
+
+.search-results li:hover {
+  background-color: #333;
+}
+
+.search-results li:last-child {
+  border-bottom: none;
+}
+
+.search-results li a {
+  color: #f1f1f1;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Адаптивность для Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    width: 100%; /* Занимает всю ширину экрана */
+  }
+
+  img {
+    width: 80px;
+    margin-bottom: 1rem;
+  }
+
+  .navbar__search {
+    width: 100%;
+    margin: 0 0 1rem;
+  }
+
+  .navbar__auth button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+/* Для очень маленьких экранов (например, мобильных телефонов) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  img {
+    width: 60px;
+  }
+
+  .navbar__auth button {
+    padding: 0.5rem;
+  }
+
+  .navbar__search input {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

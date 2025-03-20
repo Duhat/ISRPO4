@@ -1,0 +1,42 @@
+/* MainPage.css */
+
+.main-page {
+  width: 100%; /* Занимает всю ширину */
+  min-height: 100vh; /* Занимает всю высоту */
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  width: 200px; /* Фиксированная ширина для боковой панели */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.videos-section {
+  flex-grow: 1; /* Занимает оставшееся пространство */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Вертикальное расположение на маленьких экранах */
+  }
+
+  .sidebar {
+    width: 100%; /* Боковая панель занимает всю ширину */
+    padding: 10px;
+  }
+
+  .videos-section {
+    width: 100%;
+    padding: 10px;
+  }
+}

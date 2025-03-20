@@ -1,0 +1,52 @@
+.video-detail-page {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Важно для правильного расчета ширины */
+}
+
+.video-main-content {
+  width: 70%;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.video-player {
+  width: 100%;
+}
+
+.video-player iframe {
+  width: 100%;
+  height: 800px;
+  border: none;
+  box-sizing: border-box;
+}
+
+.video-info {
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.related-videos {
+  width: 30%;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+/* Адаптивная верстка для узких экранов */
+@media (max-width: 768px) {
+  .video-detail-page {
+    flex-direction: column;
+  }
+
+  .video-main-content {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .related-videos {
+    width: 100%;
+    padding-left: 0;
+  }
+}

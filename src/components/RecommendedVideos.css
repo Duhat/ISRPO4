@@ -1,0 +1,21 @@
+.recommended-videos {
+  padding: 20px;
+}
+
+.videos-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Три колонки на ПК */
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .videos-list {
+    grid-template-columns: repeat(2, 1fr); /* Две колонки на планшетах */
+  }
+}
+
+@media (max-width: 480px) {
+  .videos-list {
+    grid-template-columns: 1fr; /* Одна колонка на смартфонах */
+  }
+}
