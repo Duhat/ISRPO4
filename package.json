@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Duhat.github.io/ISRPO4",
+  "homepage": "https://Duhat.github.io/dart-front",
   "scripts": {
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build",
